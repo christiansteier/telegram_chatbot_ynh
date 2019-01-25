@@ -16,9 +16,11 @@ app=$YNH_APP_INSTANCE_NAME
 domain=$(ynh_app_setting_get "$app" domain)
 path=$(ynh_app_setting_get "$app" path)
 
-# Check domain/path availability
-sudo yunohost app checkurl "${domain}${path}" -a "${app}" \
-    || ynh_die "Path not available: ${domain}${path}"
+# Check domain/path availability 
+ynh_webpath_available $domain $path_url \
+|| ynh_die "Path not available: ${domain}${path_url}"
+test ! -d $final_path \
+|| ynh_die "There is already a directory: $final_path "
 
 # Check $final_path
 final_path="/opt/${app}"
