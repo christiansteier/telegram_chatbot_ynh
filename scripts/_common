@@ -53,7 +53,7 @@ CHECK_PATH () {	# Checks / at the beginning of the path. And his absence at the 
 }
 
 CHECK_DOMAINPATH () {	# Checks the availability of the path and domain.
-	sudo ynh_webpath_register $app $domain $path
+	ynh_webpath_register $app $domain $path
 }
 
 CHECK_FINALPATH () {	# Checks that the destination folder is not already in use.
