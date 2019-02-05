@@ -49,22 +49,8 @@
                     "en": "Token Telegram",
                     "fr": "Token Telegram"
                 }
-            },
-            {
-                "name": "user_github",
-                "ask": {
-                    "en": "Username Github",
-                    "fr": "Nom d'utilisateur Github"
-                }
-            },
-            {
-                "name": "token_github",
-                "type": "id",
-                "ask": {
-                    "en": "Token API Github",
-                    "fr": "Token de l'API Github"
-                }
             }
+
         ]
     }
 }
